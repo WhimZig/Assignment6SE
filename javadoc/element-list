@@ -1,0 +1,11 @@
+main
+main.decorators
+main.decorators.shapes
+main.decorators.styles
+svg
+svg.element
+svg.element.shape
+svg.element.shape.path
+svg.element.style
+svg.element.text
+view
