@@ -70,6 +70,54 @@ public class SVGRenderer
        	g2d.setPaint(new Color(255, 127, 0));
        	g2d.drawString("Draw SVG contents here.", 10, 20);
 
+       	for(Element element : svg.elements()) {
+       		Shape shape = null;
+       		Decorator decorator = null;
+       		
+       		switch(element.label()) {
+       		
+       		case "circle":
+       			shape = (Circle)element;
+       			decorator = new DecoratorGraphics2DCircle((Circle)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "ellipse":
+       			shape = (Ellipse)element;
+       			decorator = new DecoratorGraphics2DEllipse((Ellipse)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "line":
+       			shape = (Line)element;
+       			decorator = new DecoratorGraphics2DLine((Line)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "polygon":
+       			shape = (Polygon)element;
+       			decorator = new DecoratorGraphics2DPolygon((Polygon)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "polyline":
+       			shape = (Polyline)element;
+       			decorator = new DecoratorGraphics2DPolyline((Polyline)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "rect":
+       			shape = (Rect)element;
+       			decorator = new DecoratorGraphics2DRect((Rect)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		case "path":
+       			shape = (Path)element;
+       			decorator = new DecoratorGraphics2DPath((Path)shape,g2dImage);
+       			decorator.render();
+       			break;
+       		
+       		
+       		}
+       		
+       		
+       	}
+       	
        	// **
        	// ** TODO: Draw SVG contents here.
        	// **
