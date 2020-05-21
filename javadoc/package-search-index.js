@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"l":"main"},{"l":"main.decorators"},{"l":"main.decorators.shapes"},{"l":"main.decorators.styles"},{"l":"svg"},{"l":"svg.element"},{"l":"svg.element.shape"},{"l":"svg.element.shape.path"},{"l":"svg.element.style"},{"l":"svg.element.text"},{"l":"view"}]
