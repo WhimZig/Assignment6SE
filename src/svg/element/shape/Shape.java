@@ -79,6 +79,15 @@ public abstract class Shape extends BaseElement
 				
 				if (proto.label().equals("stroke"))
 					strokeColour = ((Stroke)style).colour();  // store the stroke colour
+				
+				if (proto.label().equals("stroke-width")) {
+					/*
+					 * Add code here in case the label equals this thingy
+					 */
+				}
+					
+					
+				
 			}
 		}
 		
