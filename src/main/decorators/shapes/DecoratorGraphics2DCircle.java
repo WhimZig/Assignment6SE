@@ -1,5 +1,6 @@
 package main.decorators.shapes;
 
+import java.awt.BasicStroke;
 import java.awt.Graphics2D;
 
 import main.decorators.DecoratorGraphics2D;
@@ -25,6 +26,13 @@ public class DecoratorGraphics2DCircle extends DecoratorGraphics2D
 			graphics2D.setPaint(((Shape)component).fillColour());
 			graphics2D.fillArc(x, y, diameter, diameter, 0, 360);
 		}
+		
+		/*
+		if (((Shape)component).strokeWidth() != 0) {
+			graphics2D.setStroke(new BasicStroke((float) component.strokeWidth()));	
+		} else {
+			graphics2D.setStroke(this.defaultStroke);
+		}*/
 
 		if (((Shape)component).strokeColour() != null)
 		{
@@ -32,6 +40,9 @@ public class DecoratorGraphics2DCircle extends DecoratorGraphics2D
 			graphics2D.setPaint(((Shape)component).strokeColour());
 			graphics2D.drawArc(x, y, diameter, diameter, 0, 360);
 		}
+		
+		
+		
 	}
 
 }

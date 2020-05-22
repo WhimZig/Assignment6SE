@@ -69,7 +69,7 @@ public abstract class BaseElement implements Element
 	{
 		return 0;  // default implementation
 	}
-	
+
 	//-------------------------------------------------------------------------
 
 }

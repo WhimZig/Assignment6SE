@@ -24,7 +24,7 @@ public abstract class Shape extends BaseElement
 		
 	protected Color fillColour = null;
 	protected Color strokeColour = null;
-	protected double strokeWidth;
+	protected double strokeWidth = 0;
 	
 	//-------------------------------------------------------------------------
 
@@ -54,6 +54,7 @@ public abstract class Shape extends BaseElement
 	{
 		return strokeColour;
 	}
+
 		
 	//-------------------------------------------------------------------------
 
@@ -83,7 +84,7 @@ public abstract class Shape extends BaseElement
 				
 				if (proto.label().equals("stroke-width")) {
 					//TODO figure this out
-					strokeWidth = strokeWidth();
+					this.strokeWidth = ((StrokeWidth)style).width();
 					//also fails with both double and StrokeWidth types
 					//strokeWidth = ((StrokeWidth)style).width();
 				}
@@ -97,10 +98,14 @@ public abstract class Shape extends BaseElement
 	@Override
 	public double strokeWidth()
 	{
+		return strokeWidth;
+		/*
 		for (Style style : styles)
-			if (style.label().equals("stroke-width"))
-				return ((StrokeWidth)style).width();
-		return 0;  // no stroke width specified
+			if (style.label().equals("stroke-width")) {
+				double asdf = ((StrokeWidth)style).width();
+				return asdf;
+			}
+		return 0;*/  // no stroke width specified
 	}
 	
 	//-------------------------------------------------------------------------
