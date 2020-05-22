@@ -24,6 +24,7 @@ public abstract class Shape extends BaseElement
 		
 	protected Color fillColour = null;
 	protected Color strokeColour = null;
+	protected double strokeWidth;
 	
 	//-------------------------------------------------------------------------
 
@@ -81,16 +82,13 @@ public abstract class Shape extends BaseElement
 					strokeColour = ((Stroke)style).colour();  // store the stroke colour
 				
 				if (proto.label().equals("stroke-width")) {
-					/*
-					 * Add code here in case the label equals this thingy
-					 */
+					//TODO figure this out
+					strokeWidth = strokeWidth();
+					//also fails with both double and StrokeWidth types
+					//strokeWidth = ((StrokeWidth)style).width();
 				}
-					
-					
-				
 			}
 		}
-		
 		return okay;
 	}
 
