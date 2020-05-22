@@ -69,7 +69,7 @@ public class SVGRenderer
        	g2dImage.setRenderingHint(RenderingHints.KEY_RENDERING, RenderingHints.VALUE_RENDER_QUALITY);
        	
        	g2d.setPaint(new Color(255, 127, 0));
-		g2d.drawString("Draw SVG contents here.", 10, 20);
+		//g2d.drawString("Draw SVG contents here.", 10, 20);
 		
 		DecoratorFactory factory = new DecoratorFactory();
 		   for(Element element : svg.elements()) {
