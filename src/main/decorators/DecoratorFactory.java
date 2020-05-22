@@ -53,7 +53,8 @@ public class DecoratorFactory{
        			shape = (Path)element;
                 decorator = new DecoratorGraphics2DPath((Path)shape,g2dImage);
                 return decorator;	
-            }   	
+            }
+       	System.out.println("Invalid file info");
         return decorator;	
     }
     
